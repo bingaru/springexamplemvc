@@ -1,12 +1,15 @@
 dist: xenial
-
 language: java
-
 jdk:
-  - openjdk8
-
+- openjdk8
 cache:
   directories:
-    - "$HOME/.m2"
-
+  - "$HOME/.m2"
 script: mvn clean package
+deploy:
+  provider: releases
+  api_key:
+    secure: Bm4KS1OgqJ4E+2BsCpwfaJW+U7AhEz827BcBGOjMHAERdDVdBWneE+QLbZiSPBDmMYaMIw6PkqWk1J6sHkrmyFa3xk+kduj15K2YkC5Ev1OmhTb9A8QZeOgBb/BEs7RNe7HYVmgTrlaQ2PCgaX4kzETTJHZe9AkoAAtX+KZYTR/moaT/3W5BGKgmCzcdsF7O4V7SYesOArDxRbVbZB5xDXJIaI/ql6dRnqFemCD+N027Y1FDZMomKwQlF9qgUJaKdL/Ec2kYypLPca/Cq9G4npVV9i9AJfGhFZ/OTmlLxIgdUNVeXaLiGbP688diVyHOOTRD6NFkkfemYho8M58o4VOZQGMtISaomgDhFozEKui+Gd7V7ztaiJ6y5k34HfiAUgVbnbYjrcpiwVir72Tr6mEO1vcEYaJV4aok4oYAwLjigLmtfxEhbfIu3m7rkg22zlZ2RlmllVLrYVKcmwvtREmgoyDsGCrcboGiX4+Dwr2mPngvEH/luiIv0vMO0SIMG1GfdGCBcNXusOU3/2hp9vo0y4v39d3XrF00PIsVOWCEIapi8w+cw3jm2kQABkF6EKuigSrCRRYjmGIv/UDW0C9F7aQvYMQZdR1LLcgkXRMeOSlzEF5cG1zM7JxlHQ//021C9/+sSiiPczBDXsjTRUrYosS+FlRHykQHmvkG1jo=
+  file: target/springmvcexample.war
+  on:
+    repo: bingaru/springexamplemvc
