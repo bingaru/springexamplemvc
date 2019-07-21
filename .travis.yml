@@ -14,7 +14,7 @@ deploy:
   provider: releases
   api_key:
     secure: EScXx7OBFvHg2GQ423mApiixjFV35IJJjd5LE5w66GUEdh6Dhj1XbCpAlEdUwYxLvzBXoQOIcPmCXMRaX884ypPfu5CzOlN7Tzmxo+CUbbjsOIfau7K2fzKvr/0BjOl0FhE85L5QiOYV2O1Gq8uZjBAqq/IfYMKeo6Xm8PzwKd4Res9g0t+9jPoVZdWvRcvlzvBS8Qw95xma12/p+0Hda9FgRh0jpI+NTZbydE0yizRr4pCPqGtPe3pxRv7S+xDgv/MmMQNZItngnOqlwmFpoJX0W+FT+yUwRoqNol8C1XH/kpTXPK0sif7rSb/1iWONRjMK/XxfPSTsfcyO/ch+HM4iXgOBwcpHCUKPTl0MOth64/M1h5ceeSXjMiDlJ/IoyYl3Aulm9RuaQBfANM9NydEJk0bDSNXrAFDbPCyfGqzHIqfnIXyw6FEt6ZBxCNCW4c9oJJIp+YlABDwJ77TvXvWKYIjL4ijsJ/1mLuGvYaAe3CzEQqF0syOZ6tGdI/fbJnnlho+I7VVkQwSMZYx1/saf9Qpy6xheY5f/NJGDmtkM4XMFcmqnwNrLvAhaPmDZyuyxmNKADlWXVGV7HgQ/1CypVHQOn/WE1RzMeCwZVvI06Kw+SGUUZ+1pErFQIXuW2jnru+pYxy92r3w/hfUbQDSQrwd+FPIH8O5YpJmVQkk=
-  file: target/springmvcexample.war
+  file: target/$DEPLOY_FILE
   skip_cleanup: true
   on:
     branch: master
